@@ -1,0 +1,77 @@
+@import '../../styles/global/extends';
+.dashboard {
+  aside {
+    position: fixed;
+    border-right: 1px solid var(--divider-color);
+    height: 100%;
+    width: 256px;
+    overflow-y: auto;
+    .logo {
+      padding: 24px 24px 0;
+      margin-bottom: 46px;
+      img {
+        width: 142px;
+      }
+    }
+    .sidebar-tabs {
+      padding: 14px 24px;
+      p {
+        @extend %body-2;
+        color: var(--gray-color);
+        margin-bottom: 20px;
+      }
+      ul {
+        list-style: none;
+        li {
+          @extend %subtitle-2;
+          margin-bottom: 15px;
+          color: var(--gray-dark-color);
+          cursor: pointer;
+          .svg-icons {
+            margin-right: 12px;
+            path {
+              fill: var(--gray-lighter-color);
+            }
+          }
+          &:hover {
+            color: var(--primary-color);
+            .svg-icons {
+              path {
+                fill: var(--primary-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    hr {
+      background-color: var(--divider-color);
+    }
+    .help {
+      padding: 14px 24px;
+      cursor: pointer;
+      .svg-icons {
+        margin-right: 12px;
+        vertical-align: bottom;
+        path {
+          fill: var(--gray-lighter-color);
+        }
+      }
+      &:hover {
+        color: var(--primary-color);
+        .svg-icons {
+          path {
+            fill: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+  .main-panel {
+    width: calc(100% - 256px);
+    margin-left: auto;
+    header {
+      @extend %h1;
+    }
+  }
+}

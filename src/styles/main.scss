@@ -1,0 +1,19 @@
+@import 'global/reset';
+@import 'global/var';
+@import 'global/extends';
+
+/* Main Rulze */
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.test {
+  fill: red;
+  transition: 0.3s;
+  &:hover {
+    fill: violet;
+  }
+}
